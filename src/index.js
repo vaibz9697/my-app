@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import TabsWrapper from './Tabs/Component/TabsWrapper';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TabsWrapper/>
   </React.StrictMode>,
   document.getElementById('root')
 );
