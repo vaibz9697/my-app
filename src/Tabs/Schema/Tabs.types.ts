@@ -1,4 +1,7 @@
+import { Tab } from "./Tab.types";
+
 export interface TabsProps{
-    index: number;
-    listOfTabs: string[];
+    currentTab: number;
+    onTabClick: (tabSelected: number) => void;
+    listOfTabs: Tab[];
 }
