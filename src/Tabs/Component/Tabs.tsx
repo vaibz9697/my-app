@@ -17,11 +17,8 @@ export default function Tabs(props: TabsProps){
             <div className = "Tabs">
                 {listOfTabs.map((tab, index) => {
                     return <ul onClick={() => {onTabClick(index);}}>{tab.heading}</ul>
-                    // return <div className = "Tabs" onClick = {tabsOnClickHandler} >{listOfTabs[0].heading}</div>
                 })}
             </div>
-            {/* <button>{listOfTabs[0].heading}</button> */}
-            
             <div>{listOfTabs[currentTab].content}</div>
         </>
     )
