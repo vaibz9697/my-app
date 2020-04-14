@@ -4,13 +4,20 @@ import './TabsWrapper.scss'
 import { Tab } from '../Schema/Tab.types'
 const TabsWrapper = ()=>{
     const aboutMe: string = 'Hey, This is Vaibhav.'
-    const myAccount: string = 'This is my account'
+    const myAccount: string = 'This is my financial account'
     const listOfAnime: string[] = ['Vinland Saga', 'Naruto', 'One Piece', 'Hunter x Hunter']
     const myAnime: JSX.Element = <div>{listOfAnime.map(anime => {
         return (<ul>{anime}</ul>);
     })}</div> 
-    const heading: string[] = ['My Account', 'Anime', 'About me'];
-    const content: JSX.Element[] = [<div>{myAccount}</div>, <div>{myAnime}</div>, <div>{aboutMe}</div>]
+    const allShuffleCombo = ['Back, Front, Side, Cross(Change leg)', 
+    'Front, Cross, Side, Cross(Change leg)', 
+    'Side, Side, V-step outer, V-step inner(Change leg)', 
+    'Charleston swing in 2 beats: Side, Back or Front'];
+const shuffleCombos = allShuffleCombo.map(shuffleCombo => {
+    return (<ul>{shuffleCombo}</ul>)
+})
+    const heading: string[] = ['Shuffle', 'My Account', 'Anime', 'About me'];
+    const content = [shuffleCombos, myAccount, myAnime, aboutMe]
 
     let listOfTabs: Tab[] = [];
     for(let i = 0; i < heading.length; i++){
